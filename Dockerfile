@@ -20,7 +20,7 @@ RUN pip3 install Flask
 
 RUN pip3 install flask-restplus
 
-# Instal·la restplus, permet rear API REST amb el Flask.
+# Instal·la restplus, permet crear API REST amb el Flask.
 
 ADD servei_principal.py /home/servei_principal.py
 
