@@ -1,4 +1,6 @@
-FROM ubuntu # El SO que utilitza el contenidor
+FROM ubuntu 
+
+# El SO que utilitza el contenidor
 
 MAINTAINER Roger Cercós Blanch
 
