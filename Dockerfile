@@ -30,6 +30,6 @@ CMD ["python3", "/home/servei_principal.py"]
 
 # Executa el codi
 
-EXPOSE 80
+EXPOSE 5000
 
-# Obre el port 80 (HTTP)
+# Obre el port 5000 (Flask)
