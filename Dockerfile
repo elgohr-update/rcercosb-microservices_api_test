@@ -26,10 +26,10 @@ ADD servei_principal.py /home/servei_principal.py
 
 # Copia el fitxer de codi font
 
-CMD ["python3", "/home/servei_principal.py"]
-
-# Executa el codi
-
 EXPOSE 5000
 
 # Obre el port 5000 (Flask)
+
+CMD ["python3", "/home/servei_principal.py"]
+
+# Executa el codi
