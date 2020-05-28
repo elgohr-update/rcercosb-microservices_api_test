@@ -1,0 +1,13 @@
+name: Build and Publish Docker # Nom de la GitHub Action
+on: [push] # Quan es fa un push al repositori de GitHub, aquest executa aquesta acció
+jobs:
+  build:
+    runs-on: ubuntu-latest # El SO, l'última versió de l'Ubuntu
+    steps:
+    - uses: actions/checkout@master # Obté el codi font del repositori del GitHub
+    - name: Publish to Docker Repository # El nom del repositori que es penja a Docker Hub
+      uses: elgohr/Publish-Docker-Github-Action@master # La acció que fa possible la publicació del contenidor al Docker Hub
+      with:
+        name: rcercosb/servei_principal # El nom del repositori en el Docker Hub
+        username: ${{ secrets.DOCKER_USERNAME }} # Variable del GitHub que desa el nom d'usuàri del Docker
+        password: ${{ secrets.DOCKER_PASSWORD }} # Variable del GitHub que desa la contrasenya del Docker

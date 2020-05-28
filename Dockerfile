@@ -1,7 +1,15 @@
-FROM ubuntu:20.04
+FROM ubuntu # El SO que utilitza el contenidor
 
 MAINTAINER Roger Cercós Blanch
 
-RUN pip install flask-restful && apt-get install -y git-all
+RUN apt-get install -y python3 # Instal·la el Python
 
-EXPOSE 80
+RUN apt-get install -y python3-pip # Instal·la el pip
+
+RUN pip3 install Flask # Instal·la el Flask
+
+ADD servei_principal.py /home/servei_principal.py # Copia el fitxer de codi font
+
+CMD ["python3", "/home/servei_principal.py"] # Executa el codi
+
+EXPOSE 80 # Obre el port 80 (HTTP)
