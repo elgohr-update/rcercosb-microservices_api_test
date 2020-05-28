@@ -4,14 +4,26 @@ FROM ubuntu
 
 MAINTAINER Roger Cercós Blanch
 
-RUN apt-get install -y python3 # Instal·la el Python
+RUN apt-get install -y python3
 
-RUN apt-get install -y python3-pip # Instal·la el pip
+# Instal·la el Python
 
-RUN pip3 install Flask # Instal·la el Flask
+RUN apt-get install -y python3-pip
 
-ADD servei_principal.py /home/servei_principal.py # Copia el fitxer de codi font
+# Instal·la el pip
 
-CMD ["python3", "/home/servei_principal.py"] # Executa el codi
+RUN pip3 install Flask
 
-EXPOSE 80 # Obre el port 80 (HTTP)
+# Instal·la el Flask
+
+ADD servei_principal.py /home/servei_principal.py
+
+# Copia el fitxer de codi font
+
+CMD ["python3", "/home/servei_principal.py"]
+
+# Executa el codi
+
+EXPOSE 80
+
+# Obre el port 80 (HTTP)
